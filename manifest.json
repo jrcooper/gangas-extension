@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+  "name": "Gangas Chrome Extension",
+  "version": "0.1",
+  "description": "Gangas Chrome Extension",
+  "browser_action": {
+    "default_icon": "icons/default_icon.png",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": [
+      "lib/vendor/jquery-3.2.1.min.js",
+      "lib/vendor/lscache.min.js",
+      "lib/config.js",
+      "lib/logger.js",
+      "lib/data_storage.js",
+      "lib/server_connector.js",
+      "lib/domain_parser.js",
+      "background.js"
+    ]
+  },
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "storage",
+    "http://localhost:3000/",
+    "http://34.226.116.138/"
+  ]
+}

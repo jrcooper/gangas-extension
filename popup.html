@@ -1,0 +1,31 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Gangas Chrome Extension</title>
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+
+    <link href="css/styles.css" rel="stylesheet" media="screen">
+    <script type="text/javascript" src="lib/vendor/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="lib/vendor/lscache.min.js"></script>
+    <script type="text/javascript" src="lib/config.js"></script>
+    <script type="text/javascript" src="lib/logger.js"></script>
+    <script type="text/javascript" src="lib/server_connector.js"></script>
+    <script type="text/javascript" src="lib/domain_parser.js"></script>
+    <script type="text/javascript" src="lib/data_storage.js"></script>
+
+    <script type="text/javascript" src="popup.js"></script>
+  </head>
+  <body>
+    <div id="status"></div>
+  </body>
+</html>
